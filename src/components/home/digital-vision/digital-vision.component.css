@@ -1,0 +1,19 @@
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fade-in-up linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%; 
+}
+
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gradient-digital-vision{
+  background: rgb(4,20,32);
+  background: linear-gradient(0deg, hsla(206, 76%, 7%, 0) 0%, hsla(206, 76%, 12%, 0.18) 18%, hsla(206, 76%, 18%, 0.3) 30%, hsla(206, 76%, 22%, 0.42) 42%, hsla(206, 76%, 30%, 0.6) 60%);
+}
