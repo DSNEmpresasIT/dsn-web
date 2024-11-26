@@ -1,0 +1,14 @@
+.gradient-lg {
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+}
+.gradient {
+    position: absolute;
+    left: 60px;
+}
+.gradient-- {
+    background: conic-gradient(from 180deg at 50% 50%, #ffffff 0deg, rgba(196,196,196,0) 360deg);
+    opacity: 0.5;
+    filter: blur(150px);
+}

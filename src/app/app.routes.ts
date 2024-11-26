@@ -8,7 +8,7 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    loadComponent: () => import('../components/home/digital-vision/digital-vision.component').then(c => c.DigitalVisionComponent),
+    loadComponent: () => import('../app/home/home.component').then(c => c.HomeComponent),
     title: 'Inicio-DSNEmpresas',
   },
 ];
