@@ -9,7 +9,7 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () => import('../app/home/home.component').then(c => c.HomeComponent),
-    title: 'Inicio-DSNEmpresas',
+    title: 'DSN Empresas',
   },
 ];
 

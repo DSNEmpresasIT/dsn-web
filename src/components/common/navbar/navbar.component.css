@@ -1,0 +1,13 @@
+@keyframes blur{
+  to{
+   background-color: #125486;
+   box-shadow: 0px 13px 9px -5px rgba(0, 0, 0, 0.057);
+  }
+}
+
+.headerScroll{
+  animation: blur linear both;
+  
+  animation-timeline: scroll();
+  animation-range: 0 500px;
+}

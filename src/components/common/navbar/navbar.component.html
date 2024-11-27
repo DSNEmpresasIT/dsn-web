@@ -1,0 +1,75 @@
+<nav class="w-full h-[83px]   items-center inline-flex    font-normal bg-[#101215]/40 text-white font-['Kumbh Sans'] shadow text-xl">
+  <div class="max-w-screen-xl flex flex-wrap w-full px-2 items-center justify-end mx-auto ">
+    <button
+      (click)="toggleMenu()"
+      type="button"
+      class="inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+      </svg>
+    </button>
+
+    <div [ngClass]="{ 'block': isOpen, 'hidden': !isOpen }" class="w-full md:flex justify-between  items-center  " id="navbar-default">
+      <img src="./images/logoDSN.png" class="h-[66px] pb-[6px] pt-[11px]" alt="DSN Logo">
+
+      <ul class="font-medium flex flex-col bg-[#3b96d1] md:bg-transparent p-4 md:p-0 mt-4  rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+        <li>
+          <a [routerLink]="basePath" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:hover:text-[#3B96D1] md:bg-transparent md:p-0">
+            Home
+          </a>
+        </li>
+
+        <!-- <li class="relative">
+          <button (click)="toggleDeptMenu()" class="flex gap-2 py-2 px-3 peer items-center rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:bg-transparent md:p-0">
+            desplegable
+          </button>
+
+          <div [ngClass]="{ 'block': isDeptOpen, 'hidden': !isDeptOpen }" class="absolute left-0 pt-2 justify-center w-[160px] bg-[#3b96d1]/60 text-white rounded-lg shadow-md">
+            <ul class="flex flex-col">
+              <li>
+                <a routerLink="" class="block py-2 px-2 rounded hover:bg-gray-100 hover:text-[#3B96D1]">
+                 1 item
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="block py-2 px-2 rounded hover:bg-gray-100 hover:text-[#3B96D1]">
+                  2 item
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="block py-2 px-2 rounded hover:bg-gray-100 hover:text-[#3B96D1]">
+                  3 item
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li> -->
+
+        <li>
+          <a [routerLink]="basePath + '#contact'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+            Contacto
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="basePath + '#location'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+            Marketing
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="basePath + '#materials'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+            Softwares
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="basePath + '#materials'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+            Rentabilidad
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
