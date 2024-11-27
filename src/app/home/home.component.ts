@@ -4,10 +4,11 @@ import { MarketingComponent } from '../../components/home/marketing/marketing.co
 import { WeBestOptionComponent } from '../../components/home/we-best-option/we-best-option.component';
 import { AboutUSComponent } from "../../components/home/about-us/about-us.component";
 import { ContactComponent } from "../../components/home/contact/contact.component";
+import { NetworkComponent } from "../../components/home/network/network.component";
 
 @Component({
   selector: 'app-home',
-  imports: [DigitalVisionComponent, MarketingComponent, WeBestOptionComponent, AboutUSComponent, ContactComponent],
+  imports: [DigitalVisionComponent, MarketingComponent, WeBestOptionComponent, AboutUSComponent, ContactComponent, NetworkComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
