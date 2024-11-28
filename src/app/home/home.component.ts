@@ -6,10 +6,11 @@ import { AboutUSComponent } from "../../components/home/about-us/about-us.compon
 import { ContactComponent } from "../../components/home/contact/contact.component";
 import { NetworkComponent } from "../../components/home/network/network.component";
 import { OurServicesComponent } from "../../components/home/our-services/our-services.component";
+import { BrandComponent } from "../../components/home/brand/brand.component";
 
 @Component({
   selector: 'app-home',
-  imports: [DigitalVisionComponent, MarketingComponent, WeBestOptionComponent, AboutUSComponent, ContactComponent, NetworkComponent, OurServicesComponent],
+  imports: [DigitalVisionComponent, MarketingComponent, WeBestOptionComponent, AboutUSComponent, ContactComponent, NetworkComponent, OurServicesComponent, BrandComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
