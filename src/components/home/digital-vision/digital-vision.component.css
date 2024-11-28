@@ -1,17 +1,21 @@
-.scroll-animation {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fade-in-up linear forwards;
-  animation-timeline: view();
-  animation-range: entry 10% cover 50%; 
-}
-
-@keyframes fade-in-up {
+@keyframes rise {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
   to {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
+
+.scroll-animation {
+  animation: rise linear both;
+  animation-timeline: scroll();  
+  animation-range:  0 500px; 
+}
+
+
 
 .gradient-digital-vision{
   background: rgb(4,20,32);
