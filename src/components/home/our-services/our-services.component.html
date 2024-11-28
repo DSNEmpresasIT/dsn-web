@@ -2,7 +2,7 @@
     <h3 class="text-white text-[40px] font-normal text-center">A LO QUE NOS DEDICAMOS</h3>
     <article class="flex flex-wrap justify-center items-center gap-[146px] mt-[41px]">
         @for (card of cards; track $index) {
-            <div class="w-[259px] h-[360px] rounded-[20px] shadow-[0px_4px_17px_10px_rgba(255,_255,_255,_0.05)] border border-[#3b96d1]/20 text-center flex flex-col justify-end items-center">
+            <div class="cursor-pointer card w-[259px] h-[360px] rounded-[20px] shadow-[0px_4px_17px_10px_rgba(255,_255,_255,_0.05)] text-center flex flex-col justify-end items-center">
                 <figure class="w-full flex justify-center items-center">
                     <img class="rounded-t-lg" src="{{card.image}}" alt={{card.alt}} />
                 </figure>
