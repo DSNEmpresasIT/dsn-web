@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /dashboard-ecommerce/
+Allow: /
+
+Sitemap: https://www.dsnempresas.com.ar/sitemap.xml
