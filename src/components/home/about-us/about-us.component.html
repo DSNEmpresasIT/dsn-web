@@ -6,18 +6,18 @@
     Y DÓNDE ESTAMOS
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-2 ">
+  <div class="grid grid-cols-2 xl:grid-cols-4 gap-6 mt-2 ">
 
     @for (member of team; track $index) {
-      <div class="group relative bg-[#3b96d1]/60 w-[301px] h-[671px] flex items-end justify-center overflow-hidden rounded-lg backdrop-blur-[20px] hover:shadow-lg">
+      <div class="bg-image-profile bg-cover bg-center  group w-[160px] relative md:w-[301px] md:h-[300px] h-[160px] xl:h-[671px] flex items-end justify-center overflow-hidden rounded-lg backdrop-blur-[20px] hover:shadow-lg">
 
-        <p class="text-white text-3xl  pb-[156px] group-hover:opacity-0 opacity-100   delay-[150ms] inline-block font-medium font-['Jost'] z-10">
+        <p class="text-white text-[15px]  xl:text-3xl my-auto md:m-0 uppercase flex  xl:pb-[156px] group-hover:opacity-0 opacity-100   delay-[150ms]  xl:inline-block font-medium font-['Jost'] z-10">
           {{member.name}}
         </p>
         
-        <div class="absolute bottom-[-100%]  group-hover:bottom-0 h-[671px] transition-all duration-[500ms] delay-[100ms] left-0 w-full bg-[#125486] text-white text-center p-6 flex flex-col gap-2">
+        <div class="absolute bottom-[-100%]  group-hover:bottom-0 h-[160px] xl:h-[671px] md:h-[300px] transition-all duration-[500ms] delay-[100ms] left-0 w-full bg-[#3b96d1]/60 text-white text-center p-6 flex flex-col gap-2">
           <div class="absolute inset-0 bg-black/30 group-hover:opacity-50 transition-opacity"></div>
-            <div class="mt-[126px] text-white text-center flex flex-col gap-[18px] text-3xl  font-['Jost']">
+            <div class="mt-0  xl:mt-[126px] text-white text-center flex flex-col gap-[18px] text-[15px]  xl:text-3xl  font-['Jost']">
               <p class="font-medium ">{{member.name}}</p>
               <p class=" font-semibold  ">{{member.age}}</p>
               <p class=" font-light  ">{{member.rol}}</p>

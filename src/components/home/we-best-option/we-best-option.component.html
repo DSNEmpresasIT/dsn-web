@@ -1,4 +1,4 @@
-<section class="justify-center md:flex flex-col items-center hidden ">
+<section class="justify-center xl:flex flex-col items-center hidden ">
   <h5 class="text-white  text-[40px] font-normal font-['Jost']">¿POR QUÉ SOMOS LA MEJOR OPCION?</h5>
 
   <div class="flex justify-center w-[825px] relative">
@@ -29,4 +29,21 @@
 
     <img class="w-full" src="./images/circle.png" />
   </div>
+</section>
+
+<section class="relative  justify-center flex flex-col items-center xl:hidden ">
+  <div class="flex flex-col justify-center text-center mb-5">
+    <h5 class="text-white text-[15px] md:text-xl font-semibold">¿POR QUÉ SOMOS LA MEJOR OPCIÓN?</h5>
+    <p class="text-white text-[15px] md:text-xl">TE OFRECEMOS</p>
+  </div>
+  <ul class="flex flex-col items-center gap-[5px]">
+    @for (item of items; track $index) {
+      <li class="flex items-center gap-2 pb-[5px] border-b border-gradient text-[13px] md:text-[18px] text-white">
+        <img src="./svgs/Arrow 11.svg" alt="arrow l">
+          {{item}}
+        <img class="rotate-180" src="./svgs/Arrow 11.svg" alt="arrow e">
+      </li>
+    }
+  </ul>
+  <img src="./images/DSN_COLOR_BG.png" class="overflow-visible hidden 2xl:block" alt="bg dsn img">
 </section>

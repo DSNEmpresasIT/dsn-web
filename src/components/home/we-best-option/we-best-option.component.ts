@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './we-best-option.component.css'
 })
 export class WeBestOptionComponent {
-
+  items = [
+    'Autenticidad para tu identidad digital',
+    'Metodologías innovadoras para cumplir tus expectativas',
+     'Visualización en tiempo real de todos los movimientos',
+    'Tiempo récord de entregas y resultados',
+  ]
 }

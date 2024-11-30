@@ -4,20 +4,39 @@
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: translateY(-10%);
     opacity: 1;
   }
 }
 
-.scroll-animation {
-  animation: rise linear both;
-  animation-timeline: scroll();  
-  animation-range:  0 500px; 
+@media (min-width: 1280px) {
+  .scroll-animation {
+    animation: rise ease-in-out both;
+    animation-timeline: scroll();  
+    animation-range: 0 450px;
+  }
 }
 
 
+.gradient-digital-vision {
+  background: linear-gradient(270deg, 
+    hsla(206, 76%, 7%, 0) 0%, 
+    hsla(206, 76%, 12%, 0.18) 18%, 
+    hsla(206, 76%, 18%, 0.3) 30%, 
+    hsla(206, 76%, 22%, 0.42) 42%, 
+    hsla(206, 76%, 30%, 0.6) 60%
+  );
+}
 
-.gradient-digital-vision{
-  background: rgb(4,20,32);
-  background: linear-gradient(0deg, hsla(206, 76%, 7%, 0) 0%, hsla(206, 76%, 12%, 0.18) 18%, hsla(206, 76%, 18%, 0.3) 30%, hsla(206, 76%, 22%, 0.42) 42%, hsla(206, 76%, 30%, 0.6) 60%);
+
+@media (min-width: 1280px) {
+  .gradient-digital-vision {
+    background: linear-gradient(0deg, 
+      hsla(206, 76%, 7%, 0) 0%, 
+      hsla(206, 76%, 12%, 0.18) 18%, 
+      hsla(206, 76%, 18%, 0.3) 30%, 
+      hsla(206, 76%, 22%, 0.42) 42%, 
+      hsla(206, 76%, 30%, 0.6) 60%
+    );
+  }
 }

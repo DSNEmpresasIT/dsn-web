@@ -1,5 +1,5 @@
 <nav class="w-full h-[83px] fixed top-0 z-[9999] headerScroll  items-center inline-flex    font-normal bg-[#101215]/40 text-white font-['Kumbh Sans']  text-xl">
-  <div class="max-w-screen-xl flex flex-wrap w-full px-2 items-center justify-end mx-auto ">
+  <div class="max-w-screen-xl flex flex-wrap relative w-full px-2 items-center justify-end mx-auto ">
     <button
       (click)="toggleMenu()"
       type="button"
@@ -11,10 +11,10 @@
       </svg>
     </button>
 
-    <div [ngClass]="{ 'block': isOpen, 'hidden': !isOpen }" class="w-full md:flex justify-between  items-center  " id="navbar-default">
-      <img src="./images/logoDSN.png" class="h-[66px] pb-[6px] pt-[11px]" alt="DSN Logo">
+    <div [ngClass]="{ 'block': isOpen, 'hidden': !isOpen }" class="w-full md:flex justify-between md:relative absolute right-0 -bottom-[270px] md:bottom-0 z-[9000]  items-center  " id="navbar-default">
+      <img src="./images/logoDSN.png" class="h-[66px] pb-[6px] pt-[11px] md:flex hidden imageSizes " alt="DSN Logo">
 
-      <ul class="font-medium flex flex-col bg-[#3b96d1] md:bg-transparent p-4 md:p-0 mt-4  rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+      <ul class="font-medium  flex flex-col bg-[#3b96d1] md:bg-transparent p-4 md:p-0 mt-4  rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
         <li>
           <a [routerLink]="basePath" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:hover:text-[#3B96D1] md:bg-transparent md:p-0">
             Home
