@@ -1,13 +1,13 @@
 <section class="flex flex-col items-center max-w-[1273px] gap-[16.25px] justify-center font-['Jost'] mx-auto px-4 mb-[136px]">
-    <h3 class="text-white text-[40px] font-normal text-center">A LO QUE NOS DEDICAMOS</h3>
-    <article class="flex flex-wrap justify-center items-center gap-[146px] mt-[41px]">
+    <h3 class="text-white sm:text-[40px] font-normal text-center text-[20px]">A LO QUE NOS DEDICAMOS</h3>
+    <article class="flex flex-wrap justify-center items-center gap-20 sm:gap-[146px] mt-[41px]">
         @for (card of cards; track $index) {
-            <div class="cursor-pointer card w-[259px] h-[360px] rounded-[20px] shadow-[0px_4px_17px_10px_rgba(255,_255,_255,_0.05)] text-center flex flex-col justify-end items-center">
-                <figure class="w-full flex justify-center items-center">
+            <div class="cursor-pointer card w-[194px] h-[230px] sm:w-[259px] sm:h-[360px] rounded-[20px] shadow-[0px_4px_17px_10px_rgba(255,_255,_255,_0.05)] text-center flex flex-col justify-center sm:justify-end items-center">
+                <figure class="w-1/2 sm:w-full flex justify-center items-center ">
                     <img class="rounded-t-lg" src="{{card.image}}" alt={{card.alt}} />
                 </figure>
-                <p class="text-white text-xl text-center font-semibold pb-[41px] px-4">{{card.title}}
-                    <span class="text-white text-xl font-normal">{{card.description}}</span>
+                <p class="text-white text-[16px] sm:text-xl text-center font-semibold sm:pb-[41px] px-4">{{card.title}}
+                    <span class="text-white text-[16px] sm:text-xl font-normal">{{card.description}}</span>
                 </p>
             </div>
         }
