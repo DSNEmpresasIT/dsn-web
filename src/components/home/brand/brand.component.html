@@ -1,9 +1,9 @@
-<section class="h-full flex-col gap-10 lg:flex-row lg:flex-nowrap lg:flex flex lg:gap-[180px]  mb-[40px] justify-center relative items-center max-w-[1273px] mx-auto px-4 mt-[51px]">
+<section class="h-full flex-col gap-10 lg:flex-row lg:flex-nowrap lg:flex flex lg:gap-[180px]  mb-[40px] justify-center relative items-center max-w-[1273px] mx-auto px-4 mt-[48px]">
     <article class="text-white z-50">
-        <h4 class="text-[30px] uppercase font-semibold text-center">También trabajamos con</h4>
-        <div class="flex flex-wrap justify-center items-center gap-[61px]">
+        <h4 class="text-xs sm:text-[30px] uppercase font-semibold text-center">También trabajamos con</h4>
+        <div class="flex flex-wrap justify-center items-center gap-[5px] md:gap-[61px]">
             @for (brand of brands; track $index) {
-                <img src="{{brand.image}}" alt="{{brand.alt}}">
+                <img class="w-[54px] h-[35px] sm:w-[123px] sm:h-[124px]" src="{{brand.image}}" alt="{{brand.alt}}">
             }
         </div>
     </article>
