@@ -1,6 +1,6 @@
-<div class=" w-full max-w-[619px] mx-auto p-8 ">
-  <h1 class="text-[#125486] text-[40px] font-semibold text-center">TE ESCUCHAMOS</h1>
-  <p class="text-[#f4f4f4] text-3xl text-center tracking-[3.6px]">Contactate con nosotros</p>
+<div class=" w-full max-w-[390px] md:max-w-[619px] mx-auto p-8 ">
+  <h1 class="text-[#125486] text-xl md:text-[40px] font-semibold text-center">TE ESCUCHAMOS</h1>
+  <p class="text-[#f4f4f4] text-[15px] md:text-3xl text-center tracking-[3.6px]">Contactate con nosotros</p>
 
   <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="space-y-6 mt-6">
     <div class="relative">
@@ -8,7 +8,7 @@
         type="email"
         formControlName="email"
         placeholder="Tu correo..."
-        class="w-full bg-[#073355] text-white/80 text-lg p-4 rounded-[15px] focus:outline-none focus:ring-2 focus:ring-[#125486]"
+        class="w-full bg-[#073355] text-white/80 text-[15px]  md:text-lg p-4 rounded-[15px] focus:outline-none focus:ring-2 focus:ring-[#125486]"
       />
       @if(contactForm.get('email')?.invalid && contactForm.get('email')?.touched){
         <small  class="text-red-500">
@@ -18,7 +18,7 @@
     </div>
 
     <div>
-      <p class="text-white/80 text-[25px]">Motivo de tu consulta</p>
+      <p class="text-white/80 text-[15px] md:text-[25px]">Motivo de tu consulta</p>
       <div class="flex flex-wrap gap-[16px] mt-2">
         @for (motive of motives; track $index) {
           <button
@@ -27,7 +27,7 @@
           (click)="selectMotive(motive)"
           [class]="
           (selectedMotive === motive) ? 
-          'bg-[#e6e6e6] text-black px-6 py-2 text-xl font-medium rounded-[15px] focus:outline-none' :
+          'bg-[#e6e6e6] text-black px-6 py-2 text-xs  md:text-xl font-medium rounded-[15px] focus:outline-none' :
           'px-6 py-2 text-white text-xl font-medium bg-[#073355] focus:text-black rounded-[15px] hover:bg-[#125486] focus:outline-none'"
         >
           {{ motive }}
@@ -47,7 +47,7 @@
         formControlName="message"
         placeholder="Contános en qué te podemos ayudar..."
         rows="6"
-        class="w-full bg-[#073355] text-white/80 text-lg p-4 rounded-[15px] focus:outline-none focus:ring-2 focus:ring-[#125486]"
+        class="w-full bg-[#073355] text-white/80 text-[15px]  md:text-lg p-4 rounded-[15px] focus:outline-none focus:ring-2 focus:ring-[#125486]"
       ></textarea>
       @if(contactForm.get('message')?.invalid && contactForm.get('message')?.touched){
         <small  class="text-red-500">
@@ -58,7 +58,7 @@
 
     <button
       type="submit"
-      class="w-full bg-[#3b96d1] text-white text-xl py-3 rounded-[5px] hover:bg-[#2a7bb3] transition-colors"
+      class=" px-[31px] text-xs py-[7px]  md:text-xl md:mx-auto  md:text-[20px] md:w-[190px]  bg-[#3b96d1] text-white flex ms-auto   rounded-[5px] hover:bg-[#2a7bb3] transition-colors"
     >
       Empezar ahora
     </button>
