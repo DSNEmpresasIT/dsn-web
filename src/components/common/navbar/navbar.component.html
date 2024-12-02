@@ -15,11 +15,11 @@
       <img src="./images/logoDSN.png" class="h-[66px] pb-[6px] pt-[11px] md:flex hidden imageSizes " alt="DSN Logo">
 
       <ul class="font-medium  flex flex-col bg-[#3b96d1] md:bg-transparent p-4 md:p-0 mt-4  rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-        <li>
+        <!-- <li>
           <a [routerLink]="basePath" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:hover:text-[#3B96D1] md:bg-transparent md:p-0">
             Home
           </a>
-        </li>
+        </li> -->
 
         <!-- <li class="relative">
           <button (click)="toggleDeptMenu()" class="flex gap-2 py-2 px-3 peer items-center rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:bg-transparent md:p-0">
@@ -48,25 +48,30 @@
         </li> -->
 
         <li>
-          <a [routerLink]="basePath + '#contact'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+          <a (click)="navService.scrollTo('contact')"   class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
             Contacto
           </a>
         </li>
         <li>
-          <a [routerLink]="basePath + '#location'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+          <a  (click)="navService.scrollTo('nosotros')"  class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+            Nosotros
+          </a>
+        </li>
+        <!-- <li>
+          <a [routerLink]="basePath + '#marketing'"  class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
             Marketing
           </a>
         </li>
         <li>
-          <a [routerLink]="basePath + '#materials'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+          <a [routerLink]="basePath + '#softwares'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
             Softwares
           </a>
         </li>
         <li>
-          <a [routerLink]="basePath + '#materials'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+          <a [routerLink]="basePath + '#rentabilidad'" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
             Rentabilidad
           </a>
-        </li>
+        </li> -->
       </ul>
 
     </div>

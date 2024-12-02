@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationService } from '../../../app/services/navigation.service';
 
 @Component({
   selector: 'app-network',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './network.component.css'
 })
 export class NetworkComponent {
+  constructor(public navService: NavigationService) {}
 
 }

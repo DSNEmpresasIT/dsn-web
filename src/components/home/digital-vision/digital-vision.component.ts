@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CountUpModule } from 'ngx-countup';
+import { NavigationService } from '../../../app/services/navigation.service';
 
 @Component({
   selector: 'app-digital-vision',
@@ -8,6 +9,8 @@ import { CountUpModule } from 'ngx-countup';
   styleUrl: './digital-vision.component.css'
 })
 export class DigitalVisionComponent {
+  constructor(public navService: NavigationService){}
+
   items = [
     { count: 10, label: 'Páginas creadas', xlMarginBottom: '0', width: '216px' },
     { count: 20, label: 'Años de experiencia', xlMarginBottom: '87.65px', width: '241px' },

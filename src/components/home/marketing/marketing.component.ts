@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationService } from '../../../app/services/navigation.service';
 @Component({
   selector: 'app-marketing',
   imports: [],
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class MarketingComponent {
   images = ["src/assets/images/aluplast.png"]
+  constructor(public navService: NavigationService){}
 }

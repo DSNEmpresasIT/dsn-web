@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NavigationService } from '../../../app/services/navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,7 @@ export class NavbarComponent {
   isOpen = false;
   isDeptOpen = false;
   basePath: string = '';
-
+  constructor(public navService: NavigationService) {}
   toggleMenu() {
     this.isOpen = !this.isOpen;
   }
