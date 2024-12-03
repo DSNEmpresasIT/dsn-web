@@ -1,0 +1,16 @@
+.gradient-lg {
+    width: 100%;
+    height: 70px;
+    z-index: -1;
+}
+
+.gradient {
+    position: absolute;
+    left: 0;
+}
+
+.gradient-- {
+    opacity: .7;
+    filter: blur(100px);
+    background: linear-gradient(to right, #125486 0%, #125486 3%, #125486 7.5%, #125486 16.5%, #125486 24%);
+}

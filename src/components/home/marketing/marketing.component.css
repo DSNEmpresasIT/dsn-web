@@ -1,14 +1,15 @@
-.gradient-lg {
-    width: 200px;
-    height: 400px;
+.gradient--t {
+    height: 845px;
+    width: 1200px;
+    background-image: radial-gradient(closest-side, #ffffff18, #091c2c00);
+    position: absolute;
     z-index: -1;
 }
-.gradient {
+
+.gradient--r {
+    height: 845px;
+    width: 1200px;
+    background-image: radial-gradient(closest-side, #ffffff18, #091c2c00);
     position: absolute;
-    left: 60px;
-}
-.gradient-- {
-    background: conic-gradient(from 180deg at 50% 50%, #ffffff 0deg, rgba(196,196,196,0) 360deg);
-    opacity: 0.5;
-    filter: blur(150px);
+    z-index: -1;
 }

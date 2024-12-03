@@ -3,7 +3,9 @@
         <h4 class="text-xs sm:text-[30px] uppercase font-semibold text-center">También trabajamos con</h4>
         <div class="flex flex-wrap justify-center items-center gap-[5px] md:gap-[61px]">
             @for (brand of brands; track $index) {
-                <img class="w-[54px] h-[35px] sm:w-[123px] sm:h-[124px]" src="{{brand.image}}" alt="{{brand.alt}}">
+                <a href="{{brand.url}}" target="_blank">
+                    <img class="w-[54px] h-[35px] sm:w-[123px] sm:h-[124px]" src="{{brand.image}}" alt="{{brand.alt}}">
+                </a>
             }
         </div>
     </article>
