@@ -12,8 +12,20 @@
 @media (min-width: 1280px) {
   .scroll-animation {
     animation: rise ease-in-out both;
-    animation-timeline: scroll();  
-    animation-range: 0 450px;
+    animation-timeline: scroll();
+    animation-duration: 1.5s; 
+  }
+  .scroll-animation.delay-1 {
+    animation-range: 0 300px;
+  }
+  .scroll-animation.delay-2 {
+    animation-range: 50px 350px;
+  }
+  .scroll-animation.delay-3 {
+    animation-range: 100px 400px;
+  }
+  .scroll-animation.delay-4 {
+    animation-range: 150px 450px;
   }
 }
 

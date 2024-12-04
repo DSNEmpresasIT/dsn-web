@@ -1,6 +1,11 @@
 @keyframes blur{
   to{
-   background-color: rgb(16, 18, 21);
+   background-color: rgb(21, 28, 40);
+   /* background-color: #0a1621; */
+
+   /* background-color: black; */
+   
+
    height: 57px;
    /* font-size: 15px; */
    padding: 0px 2px;
@@ -16,6 +21,7 @@
 
 .headerScroll{
   animation: blur linear both;
+  background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
   
   animation-timeline: scroll();
   animation-range: 0 400px;
