@@ -1,7 +1,40 @@
+
+@keyframes animateRightGradient {
+    0% {
+        position: absolute;
+        top: -336px;
+  
+    }
+    100% {
+        position: absolute;
+        top: -256px;
+        left: -200px;
+    }
+}
+@keyframes animateLeftGradient {
+    0% {
+        position: absolute;
+        top: -50px;
+  
+    }
+    100% {
+        position: absolute;
+        top: -100px;
+        right: 100px;
+    }
+}
 .gradient {
     height: 845px;
     width: 1200px;
-    background-image: radial-gradient(closest-side, #2d5b983f, #091c2c);
+    background-image: radial-gradient(closest-side, #2d5b983f, #091c2c00);
     position: absolute;
     z-index: -1;
+}
+
+.gradient--r {
+    animation: animateRightGradient 5s infinite alternate-reverse;
+}
+
+.gradient--l {
+    animation: animateLeftGradient 5s infinite alternate-reverse;
 }

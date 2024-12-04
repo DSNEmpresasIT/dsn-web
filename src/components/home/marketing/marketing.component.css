@@ -1,15 +1,20 @@
+@keyframes animateTopGradient {
+    0% {
+        position: absolute;
+        top: -545px;
+
+    }
+    100% {
+        position: absolute;
+        top: -745px;
+    }
+}
+
 .gradient--t {
     height: 845px;
     width: 1200px;
     background-image: radial-gradient(closest-side, #ffffff18, #091c2c00);
     position: absolute;
     z-index: -1;
-}
-
-.gradient--r {
-    height: 845px;
-    width: 1200px;
-    background-image: radial-gradient(closest-side, #ffffff18, #091c2c00);
-    position: absolute;
-    z-index: -1;
+    animation: animateTopGradient 5s infinite alternate-reverse;
 }

@@ -1,7 +1,21 @@
+@keyframes animateGradient {
+    0% {
+        position: absolute;
+        top: -336px;
+
+    }
+    100% {
+        position: absolute;
+        top: -256px;
+        left: 500px;
+    }
+}
+
 .gradient {
     height: 805px;
     width: 805px;
-    background-image: radial-gradient(closest-side, #ffffff18, #091c2c);
+    background-image: radial-gradient(closest-side, #ffffff18, #091c2c00);
     position: absolute;
     z-index: -1;
+    animation: animateGradient 5s infinite alternate-reverse;
 }

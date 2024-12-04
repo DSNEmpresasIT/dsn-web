@@ -41,21 +41,55 @@
   }
 }
 
-
+@keyframes animateTopGradient {
+  0% {
+    position: absolute;
+    top: 212px;
+    right: -50px;
+  }
+  100% {
+    position: absolute;
+    right: 150px;
+  }
+}
+@keyframes animateRightGradient {
+  0% {
+    position: absolute;
+    top: -592px;
+  }
+  100% {
+    position: absolute;
+    top: -892px;
+    right: -500px;
+  }
+}
+@keyframes animateGradient {
+  0% {
+    position: absolute;
+    top: -736px;
+  }
+  100% {
+    position: absolute;
+    top: -536px;
+    left: 800px;
+  }
+}
 .gradient {
   height: 705px;
   width: 905px;
   background-image: radial-gradient(closest-side, #ffffff18, #091c2c00);
   position: absolute;
   z-index: -1;
+  animation: animateGradient 5s infinite alternate-reverse;
 }
 
 .gradient--r {
   height: 845px;
   width: 1200px;
-  background-image: radial-gradient(closest-side, #ffffff18, #091c2c00);
+  background-image: radial-gradient(closest-side, #2d5b983f, #091c2c00);
   position: absolute;
   z-index: -1;
+  animation: animateRightGradient 5s infinite alternate-reverse;
 }
 
 .gradient--b {
@@ -64,4 +98,6 @@
   background-image: radial-gradient(closest-side, #2d5b983f, #091c2c00);
   position: absolute;
   z-index: -1;
+  animation: animateTopGradient 5s infinite alternate-reverse;
+
 }
