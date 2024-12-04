@@ -6,14 +6,14 @@
     }
     100% {
         position: absolute;
-        top: -745px;
+        top: -420px;
     }
 }
 
 .gradient--t {
     height: 845px;
     width: 1200px;
-    background-image: radial-gradient(closest-side, #ffffff18, #091c2c00);
+    background-image: radial-gradient(closest-side, #ffffff21, #091c2c00);
     position: absolute;
     z-index: -1;
     animation: animateTopGradient 5s infinite alternate-reverse;

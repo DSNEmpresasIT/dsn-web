@@ -14,7 +14,7 @@
 .gradient {
     height: 805px;
     width: 805px;
-    background-image: radial-gradient(closest-side, #ffffff18, #091c2c00);
+    background-image: radial-gradient(closest-side, #ffffff21, #091c2c00);
     position: absolute;
     z-index: -1;
     animation: animateGradient 5s infinite alternate-reverse;

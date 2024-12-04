@@ -6,9 +6,9 @@
     <div class="hidden xl:block xl:relative">
         <div class="gradient gradient--l top-[-50px] right-[400px]"></div>
     </div>
-    <article class="flex flex-wrap justify-center items-center gap-20 sm:gap-[146px] mt-[41px] z-20">
+    <article class="flex flex-wrap justify-center items-center gap-5 sm:gap-[146px] md:mt-7 z-20">
         @for (card of cards; track $index) {
-            <div class="cursor-pointer card w-[194px] h-[230px] sm:w-[259px] sm:h-[360px] rounded-[20px] shadow-[0px_4px_17px_10px_rgba(255,_255,_255,_0.05)] text-center flex flex-col justify-center sm:justify-end items-center">
+            <div class="cursor-pointer card w-[194px] h-[230px] sm:w-[259px] sm:h-[360px] rounded-[20px] shadow-[0px_2px_5px_1px_rgba(255,_255,_255,_0.05)]   md:shadow-[0px_4px_17px_10px_rgba(255,_255,_255,_0.05)] text-center flex flex-col justify-center sm:justify-end items-center">
                 <figure class="w-1/2 sm:w-full flex justify-center items-center ">
                     <img class="rounded-t-lg" src="{{card.image}}" alt={{card.alt}} />
                 </figure>
