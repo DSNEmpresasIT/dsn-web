@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Email } from '../interfaces/Email';
+import { Email } from '../interfaces/email';
 import { environment } from '../../environments/environment';
 import { firstValueFrom } from 'rxjs';
 
