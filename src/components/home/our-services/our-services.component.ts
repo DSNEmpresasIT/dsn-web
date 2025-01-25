@@ -8,20 +8,20 @@ import { Component } from '@angular/core';
 export class OurServicesComponent {
   cards = [
     {
-      title: "Potenciar tu marca",
-      description: "con marketing y branding de excelencia",
+      title: "Marketing Estratégico",
+      description: "Potenciamos tu marca con marketing y branding de excelencia",
       image: "./svgs/brand.svg",
       alt: "brand",
     },
     {
-      title: "Códigos de primera calidad ",
-      description: "para hacer realidad tus ideas digitales",
+      title: "Desarrollo Digital",
+      description: "Soluciones únicas para hacer realidad tus ideas tecnológicas.",
       image: "./svgs/code.svg",
       alt: "code",
     },
     {
       title: "Redes y conectividad",
-      description: "para agilizar el movimiento de tu empresa",
+      description: "Estrategias eficaces para agilizar los procesos y mejorar tu rendimiento.",
       image: "./svgs/branch.svg",
       alt: "branch",
     },
