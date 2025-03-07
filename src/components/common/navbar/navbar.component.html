@@ -1,4 +1,4 @@
-<nav class="w-full h-[83px] fixed top-0 z-[9999] headerScroll  items-center inline-flex    font-normal bg-transparent text-white font-['Kumbh Sans']  text-xl">
+<nav class="w-full h-[83px] fixed top-0 z-[9999] headerScroll  items-center inline-flex    font-normal bg-black/40 text-white font-['Kumbh Sans']  text-xl">
   <div class="max-w-screen-xl flex flex-wrap relative w-full px-2 items-center justify-end mx-auto ">
     <button
       (click)="toggleMenu()"
@@ -50,6 +50,11 @@
         <li>
           <a (click)="navService.scrollTo('contact')"   class="block cursor-pointer py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
             Contacto
+          </a>
+        </li>
+        <li>
+          <a routerLink="/work" class="block cursor-pointer py-2 px-3 rounded hover:bg-gray-100 hover:text-[#3B96D1] md:hover:bg-transparent md:border-0 md:hover:text-[#3B96D1] md:p-0">
+            Nuestros trabajos
           </a>
         </li>
         <li>
