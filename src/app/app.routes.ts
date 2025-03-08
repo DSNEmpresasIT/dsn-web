@@ -8,7 +8,12 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    loadComponent: () => import('../app/home/home.component').then(c => c.HomeComponent),
+    loadComponent: () => import('./pages/home/home.component').then(c => c.HomeComponent),
+    title: 'DSN Empresas',
+  },
+  {
+    path: 'work',
+    loadComponent: () => import('./pages/work/work.component').then(c => c.WorkComponent),
     title: 'DSN Empresas',
   },
 ];

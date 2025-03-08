@@ -1,0 +1,11 @@
+<header class="w-full h-[419px] flex flex-col text-center items-center justify-center text-white works-banner">
+  <h1 class="text-[40px] font-semibold">CONOCÉ NUESTROS TRABAJOS</h1>
+  <p class="text-2xl tracking-[4px]">PROYECTOS QUE HABLAN POR NOSOTROS</p>
+</header>
+<div class="flex flex-col gap-[87px] mt-[102px] mb-[160px] px-7">
+  @for (item of worksGroups; track $index) {
+    <app-works-group [worksGroup]="item"></app-works-group>
+  }
+</div>
+<app-contact></app-contact>
+<app-brand></app-brand>
