@@ -16,5 +16,9 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/work/work.component').then(c => c.WorkComponent),
     title: 'DSN Empresas',
   },
+  {
+    path: '**',
+    redirectTo: 'home'
+  }
 ];
 
