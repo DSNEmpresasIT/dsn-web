@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
-    font-family: "Jost", sans-serif;
+  font-family: "Jost", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 100px);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
 }
 
 .card {
@@ -12,11 +26,4 @@
 }
 .card:hover {
     transform: scale(1.1);
-}
-
-body {
-    overflow-x: hidden;
-}
-html {
-    scroll-behavior: smooth;
 }
