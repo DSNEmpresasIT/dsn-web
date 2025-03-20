@@ -17,6 +17,11 @@ export const routes: Routes = [
     title: 'DSN Empresas',
   },
   {
+    path: 'work/:id',
+    loadComponent: () => import('./pages/work-detail/work-detail.component').then(c => c.WorkDetailComponent),
+    title: 'DSN Empresas',
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

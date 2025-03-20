@@ -1,0 +1,185 @@
+<nav class="nav-scroll-anim z-20 fixed w-full mt-[127px]">
+  <ul class="max-w-[1520px] w-full mx-auto flex px-7 text-white">
+    <li class="w-full flex">
+      <a (click)="navService.scrollTo('sobre-el-proyecto')" [class.active-section]="isActiveSection('sobre-el-proyecto')" id="sobre-el-proyecto-link" class="section-link cursor-pointer py-3 border-b border-b-[#58BDFF]/50 text-center text-2xl font-medium w-full">SOBRE EL PROYECTO</a>
+    </li>
+    <li class="w-full flex">
+      <a (click)="navService.scrollTo('tecnologias')" [class.active-section]="isActiveSection('tecnologias')" id="tecnologias-link" class="section-link cursor-pointer py-3 border-b border-b-[#58BDFF]/50 text-center text-2xl font-medium w-full">TECNOLOGÍAS</a>
+    </li>
+    <li class="w-full flex">
+      <a (click)="navService.scrollTo('resultados')" [class.active-section]="isActiveSection('resultados')" id="resultados-link" class="section-link cursor-pointer py-3 border-b border-b-[#58BDFF]/50 text-center text-2xl font-medium w-full">RESULTADOS</a>
+    </li>
+    <li class="w-full flex">
+      <a (click)="navService.scrollTo('inicia-tu-proyecto')" [class.active-section]="isActiveSection('inicia-tu-proyecto')" id="inicia-tu-proyecto-link" class="section-link cursor-pointer py-3 border-b border-b-[#58BDFF]/50 text-center text-2xl font-medium w-full">INICIA TU PROYECTO</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="pt-[184px] text-white">
+
+  <section class="max-w-[1520px] mx-auto w-full my-14 grid grid-cols-1 lg:grid-cols-12 gap-9 px-7">
+    <div class="col-span-8">
+      <div class="w-full aspect-[3/2] flex relative">
+        <button class="absolute left-0 z-10 nav-button prev p-3 ps-0 md:ps-3 top-[50%] translate-y-[-50%]" (click)="prevSlide()"
+          title="Anterior">
+          <svg width="30" height="30" fill="#3B96D1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path
+              d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+          </svg>
+        </button>
+        <button class="absolute right-0 z-10 nav-button next p-3 pe-0 md:pe-3 top-[50%] translate-y-[-50%]" (click)="nextSlide()"
+          title="Siguiente">
+          <svg width="30" height="30" fill="#3B96D1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+          </svg>
+        </button>
+        <swiper-container #swiperEl slidesPerView="1" class="mySwiper w-full bg-[#12548659]" navigation="false">
+          <!-- @for (item of images; track $index) {
+            <swiper-slide class="w-full">
+              <img src="{{item}}" alt="" class="w-full h-full object-cover">
+            </swiper-slide>
+          } -->
+        </swiper-container>
+      </div>
+    </div>
+    <div class="pt-11 col-span-4 flex flex-col">
+      <h1 class="text-4xl font-semibold uppercase">titulo del proyecto</h1>
+      <p class="text-2xl font-medium pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis fuga rerum voluptate odio praesentium perspiciatis. Quisquam enim explicabo doloribus itaque blanditiis quam commodi labore earum atque fugit eligendi molestias nostrum eveniet amet beatae minus ullam, maiores accusantium, dignissimos nobis.</p>
+      
+      <div class="mt-10 flex flex-col gap-10">
+        <p class="text-2xl flex">
+          <span class="min-w-12" aria-hidden="true">
+            <fa-icon class="text-3xl text-[#3B96D1]" [icon]="faLocationDot"></fa-icon>
+          </span>
+          Ubicación del proyecto
+        </p>
+        <p class="text-2xl flex">
+          <span class="min-w-12" aria-hidden="true">
+            <fa-icon class="text-3xl text-[#3B96D1]" [icon]="faPhone"></fa-icon>
+          </span>
+          XXX-XXX-XXXX
+        </p>
+        <div class="text-[#3B96D1] flex gap-6">
+          <a href="" title="" class="text-4xl">
+            <fa-icon [icon]="faWhatsapp"></fa-icon>
+          </a>
+          <a href="" title="" class="text-4xl">
+            <fa-icon [icon]="faEnvelope"></fa-icon>
+          </a>
+          <a href="" title="" class="text-4xl">
+            <fa-icon [icon]="faLinkedinIn"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="flex flex-col gap-8">
+    <section id="sobre-el-proyecto" class="max-w-[1520px] mx-auto w-full px-7">
+      <h2 class="text-2xl font-medium text-[#58BDFF]">SOBRE EL PROYECTO</h2>
+      <p class="text-xl mt-2 text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel accumsan justo. Nam in nibh quis leo placerat
+      blandit at vitae es t. Curabitur nec venenatis erat. Integer scelerisque, metus sed tincidunt porttitor, magna nulla
+      semper neque, eu aliquet felis ipsum sed arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel
+      accumsan justo. Nam in nibh quis leo placerat blandit at vitae es t. Curabitur nec venenatis erat. Integer scelerisque,
+      metus sed tincidunt porttitor, magna nulla semper neque, eu aliquet felis ipsum sed arcu.Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nullam vel accumsan justo. Nam in nibh quis leo placerat blandit at vitae es t. Curabitur
+      nec venenatis erat. Integer scelerisque, metus sed tincidunt porttitor</p>
+    </section>
+  
+    <section id="tecnologias" class="max-w-[1520px] mx-auto w-full px-7">
+      <h2 class="text-2xl font-medium text-[#58BDFF]">TECNOLOGÍAS</h2>
+      <p class="text-xl mt-2 text-balance">En cada proyecto, utilizamos una combinación de herramientas digitales, softwares y tecnologías diseñadas para optimizar cada etapa del proceso, desde la conceptualización hasta la entrega final. Nuestro enfoque integra diseño, desarrollo, iteraciones y comunicación de manera eficiente, garantizando resultados de alta calidad en proyectos dinámicos, eficientes y adaptados a las necesidades de cada cliente.</p>
+    </section>
+  
+    <section class="max-w-[1520px] mx-auto w-full px-7">
+      <h2 class="text-2xl font-medium text-[#58BDFF]">DISEÑO Y PROTOTIPO</h2>
+      <p class="text-xl mt-2 text-balance">En la etapa de diseño y prototipado, utilizamos herramientas especializadas que nos permiten transformar ideas en interfaces funcionales, visualmente atractivas y centradas en el usuario. Cada herramienta elegida cumple un rol clave en el proceso, garantizando precisión, coherencia y colaboración continua.</p>
+      <div class="flex gap-[10px] mt-5">
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <fa-icon [icon]="faFigma"></fa-icon>
+        </div>
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <p class="font-inter font-semibold">Ai</p>
+        </div>
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <p class="font-inter font-semibold">Ps</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-[1520px] mx-auto w-full px-7">
+      <h2 class="text-2xl font-medium text-[#58BDFF]">PROGRAMACIÓN Y FUNCIONALIDADES</h2>
+      <p class="text-xl mt-2 text-balance">En el desarrollo de cada proyecto, aplicamos un conjunto de tecnologías que nos permite construir productos robustos, escalables y eficientes. Cada herramienta se selecciona cuidadosamente según los requerimientos específicos del proyecto.</p>
+      <div class="flex gap-[10px] mt-5">
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <fa-icon [icon]="faNodeJs"></fa-icon>
+        </div>
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <fa-icon [icon]="faAngular"></fa-icon>
+        </div>
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <fa-icon [icon]="faReact"></fa-icon>
+        </div>
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <img src="svgs/next-js.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-[1520px] mx-auto w-full px-7">
+      <h2 class="text-2xl font-medium text-[#58BDFF]">ORGANIZACIÓN Y COMUNICACIÓN</h2>
+      <p class="text-xl mt-2 text-balance">La comunicación constante y clara es fundamental para el éxito de cada proyecto. Por eso, utilizamos herramientas que
+      nos permiten mantener una sincronización fluida entre todos los miembros del equipo y el cliente.</p>
+      <div class="flex gap-[10px] mt-5">
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <fa-icon [icon]="faTrello"></fa-icon>
+        </div>
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <fa-icon [icon]="faDiscord"></fa-icon>
+        </div>
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <fa-icon [icon]="faEnvelope"></fa-icon>
+        </div>
+        <div class="w-[75px] shadow-md aspect-square bg-[#12548659] rounded-[5px] flex justify-center items-center text-5xl text-[#3B96D1]">
+          <fa-icon [icon]="faHeadphonesSimple"></fa-icon>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultados" class="max-w-[1520px] mx-auto w-full px-7">
+      <h2 class="text-2xl font-medium text-[#58BDFF]">RESULTADOS</h2>
+      <p class="text-xl mt-2 text-balance">Cada proyecto que desarrollamos es el resultado de un proceso integral donde convergen diseño, tecnología y comunicación. Nuestro enfoque se centra en crear soluciones que no solo cumplan con los objetivos iniciales, sino que también superen las expectativas, aportando valor y una experiencia digital de calidad. En cada entrega buscamos no solo resolver una necesidad, sino también aportar innovación, calidad y un acompañamiento continuo para garantizar el éxito a largo plazo.</p>
+    </section>
+
+    <section class="max-w-[1520px] mx-auto w-full px-7">
+      <h2 class="text-2xl font-medium text-[#58BDFF]">¿QUÉ ESPERAR DE NUESTROS PROYECTOS?</h2>
+      <ul class="flex flex-col gap-4 mt-5 text-xl">
+        <li>
+          <p class="text-balance"><span class="font-medium">Enfoque Centrado en el Usuario:</span> Desde el primer boceto hasta la implementación final, priorizando la experiencia del usuario y fluidez del producto.</p>
+          <div class="h-[1px] w-full max-w-[297px] mt-2 bg-gradient-to-r from-[#3B96D1] to-transparent"></div>
+        </li>
+        <li>
+          <p class="text-balance"><span class="font-medium">Procesos Optimizados:</span> A lo largo del desarrollo, aplicamos metodologías ágiles que nos permitieron adaptarnos rápidamente a cambios y mejorar continuamente cada funcionalidad, garantizando entregas parciales que facilitaron la revisión constante y la alineación con los objetivos del proyecto.</p>
+          <div class="h-[1px] w-full max-w-[297px] mt-2 bg-gradient-to-r from-[#3B96D1] to-transparent"></div>
+        </li>
+        <li>
+          <p class="text-balance"><span class="font-medium">Tecnología Robusta:</span> El uso de tecnologías modernas y escalables aseguró un rendimiento óptimo, estabilidad y seguridad en el producto final. Cada línea de código fue escrita con precisión para garantizar una arquitectura limpia y eficiente.</p>
+          <div class="h-[1px] w-full max-w-[297px] mt-2 bg-gradient-to-r from-[#3B96D1] to-transparent"></div>
+        </li>
+        <li>
+          <p class="text-balance"><span class="font-medium">Resultados Medibles:</span> Los productos entregados no solo cumplen con los requisitos técnicos y estéticos, sino que también generan impacto. Medimos el éxito a través la mejora en los tiempos de respuesta, la optimización de procesos internos y la creación de experiencias digitales memorables.</p>
+          <div class="h-[1px] w-full max-w-[297px] mt-2 bg-gradient-to-r from-[#3B96D1] to-transparent"></div>
+        </li>
+        <li>
+          <p class="text-balance"><span class="font-medium">Colaboración Transparente:</span> El trabajo en equipo y la comunicación fluida fueron clave para mantener una visión compartida a lo largo del proyecto, asegurando que cada decisión estuviera alineada con los objetivos estratégicos.</p>
+        </li>
+      </ul>
+    </section>
+
+    <h3 id="inicia-tu-proyecto" class="text-[#58BDFF] text-2xl font-medium text-center pt-16">INICIÁ TU PROYECTO Y TRANSFORMÁ TUS IDEAS EN ACCIONES</h3>
+  </div>
+
+  <app-contact></app-contact>
+
+</div>

@@ -1,0 +1,17 @@
+.nav-scroll-anim {
+  animation: nav-anim linear both;
+  animation-timeline: scroll();
+  animation-range: 0 400px;
+}
+
+@keyframes nav-anim {
+  to {
+    background-color: rgb(21, 28, 40);
+    margin-top: 57px;
+  }
+}
+
+.section-link.active-section {
+  color: #58BDFF;
+  background: linear-gradient(0deg, rgba(59, 150, 209, 0.13) 0%, rgba(59, 150, 209, 0.10) 16%, rgba(59, 150, 209, 0.08) 35.5%, rgba(59, 150, 209, 0.05) 51.5%, rgba(59, 150, 209, 0.04) 67%, rgba(59, 150, 209, 0.03) 76%, rgba(59, 150, 209, 0.00) 100%);
+}
