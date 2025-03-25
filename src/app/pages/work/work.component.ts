@@ -59,7 +59,7 @@ export class WorkComponent implements OnInit {
       ]
     },
     {
-      title: 'SOFTWARES Y PÁGINAS',
+      title: 'SOFTWARE Y PÁGINAS',
       description: 'Descubrí cómo transformamos ideas en realidad, desarrollando páginas y softwares que impulsan la presencia y el crecimiento de nuestros clientes.',
       projects: [
         {

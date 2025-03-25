@@ -3,7 +3,12 @@ import { faLocationDot, faPhone, faEnvelope, faHeadphonesSimple } from '@fortawe
 import { faWhatsapp, faLinkedinIn, faFigma, faNodeJs, faAngular, faReact, faTrello, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { ContactComponent } from "../../../components/home/contact/contact.component";
 import { NavigationService } from '../../services/navigation.service';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+
+export enum Carousel {
+  PROJECT = 'projectSwiper',
+  RESULTS = 'resultsSwiper'
+}
 
 @Component({
   selector: 'app-work-detail',
@@ -30,10 +35,13 @@ export class WorkDetailComponent {
   faTrello = faTrello;
   faDiscord = faDiscord;
 
+  carousels = Carousel;
+
   currentSection: string = '';
   navService = inject(NavigationService);
 
-  @ViewChild('swiperEl', { static: false }) swiperEl?: ElementRef;
+  @ViewChild('projectSwiper', { static: false }) projectSwiper?: ElementRef;
+  @ViewChild('resultsSwiper', { static: false }) resultsSwiper?: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
@@ -68,8 +76,11 @@ export class WorkDetailComponent {
   }
 
   ngAfterViewInit() {
-    if (this.swiperEl) {
-      (this.swiperEl.nativeElement as any).initialize();
+    if (this.projectSwiper) {
+      (this.projectSwiper.nativeElement as any).initialize();
+    }
+    if (this.resultsSwiper) {
+      (this.resultsSwiper.nativeElement as any).initialize();
     }
   }
 
@@ -77,12 +88,44 @@ export class WorkDetailComponent {
     document.documentElement.style.removeProperty('--scroll-padding');
   }
 
-  prevSlide() {
-    (this.swiperEl?.nativeElement as any).swiper.slidePrev();
+  prevSlide(carousel: Carousel) {
+    switch (carousel) {
+      case (Carousel.PROJECT):
+        (this.projectSwiper?.nativeElement as any).swiper.slidePrev();
+        break;
+      case (Carousel.RESULTS):
+        (this.resultsSwiper?.nativeElement as any).swiper.slidePrev();
+        break;
+    }
   }
 
-  nextSlide() {
-    (this.swiperEl?.nativeElement as any).swiper.slideNext();
+  nextSlide(carousel: Carousel) {
+    switch (carousel) {
+      case (Carousel.PROJECT):
+        (this.projectSwiper?.nativeElement as any).swiper.slideNext();
+        break;
+      case (Carousel.RESULTS):
+        (this.resultsSwiper?.nativeElement as any).swiper.slideNext();
+        break;
+    }
+  }
+
+  projectImages = new Array(3);
+  resultsImages = new Array(7);
+
+  resultsSwiperbreakpoints = {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
   }
   
 }

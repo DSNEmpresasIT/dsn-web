@@ -20,26 +20,26 @@
   <section class="max-w-[1520px] mx-auto w-full my-14 grid grid-cols-1 lg:grid-cols-12 gap-9 px-7">
     <div class="col-span-8">
       <div class="w-full aspect-[3/2] flex relative">
-        <button class="absolute left-0 z-10 nav-button prev p-3 ps-0 md:ps-3 top-[50%] translate-y-[-50%]" (click)="prevSlide()"
+        <button class="absolute left-0 z-10 nav-button prev p-3 ps-0 md:ps-3 top-[50%] translate-y-[-50%]" (click)="prevSlide(carousels.PROJECT)"
           title="Anterior">
           <svg width="30" height="30" fill="#3B96D1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
             <path
               d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
           </svg>
         </button>
-        <button class="absolute right-0 z-10 nav-button next p-3 pe-0 md:pe-3 top-[50%] translate-y-[-50%]" (click)="nextSlide()"
+        <button class="absolute right-0 z-10 nav-button next p-3 pe-0 md:pe-3 top-[50%] translate-y-[-50%]" (click)="nextSlide(carousels.PROJECT)"
           title="Siguiente">
           <svg width="30" height="30" fill="#3B96D1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
             <path
               d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
           </svg>
         </button>
-        <swiper-container #swiperEl slidesPerView="1" class="mySwiper w-full bg-[#12548659]" navigation="false">
-          <!-- @for (item of images; track $index) {
-            <swiper-slide class="w-full">
+        <swiper-container #projectSwiper slidesPerView="1" class="mySwiper w-full" navigation="false" [pagination]="{ clickable: true }">
+          @for (item of projectImages; track $index) {
+            <swiper-slide class="w-full bg-[#12548659]">
               <img src="{{item}}" alt="" class="w-full h-full object-cover">
             </swiper-slide>
-          } -->
+          }
         </swiper-container>
       </div>
     </div>
@@ -75,7 +75,7 @@
     </div>
   </section>
 
-  <div class="flex flex-col gap-8">
+  <div class="flex flex-col gap-10">
     <section id="sobre-el-proyecto" class="max-w-[1520px] mx-auto w-full px-7">
       <h2 class="text-2xl font-medium text-[#58BDFF]">SOBRE EL PROYECTO</h2>
       <p class="text-xl mt-2 text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel accumsan justo. Nam in nibh quis leo placerat
@@ -150,6 +150,29 @@
     <section id="resultados" class="max-w-[1520px] mx-auto w-full px-7">
       <h2 class="text-2xl font-medium text-[#58BDFF]">RESULTADOS</h2>
       <p class="text-xl mt-2 text-balance">Cada proyecto que desarrollamos es el resultado de un proceso integral donde convergen diseño, tecnología y comunicación. Nuestro enfoque se centra en crear soluciones que no solo cumplan con los objetivos iniciales, sino que también superen las expectativas, aportando valor y una experiencia digital de calidad. En cada entrega buscamos no solo resolver una necesidad, sino también aportar innovación, calidad y un acompañamiento continuo para garantizar el éxito a largo plazo.</p>
+      <div class="relative mt-8">
+        <button class="absolute left-0 z-10 nav-button prev p-3 ps-0 md:ps-3 top-[50%] translate-y-[-50%]" (click)="prevSlide(carousels.RESULTS)"
+          title="Anterior">
+          <svg width="30" height="30" fill="#3B96D1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path
+              d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+          </svg>
+        </button>
+        <button class="absolute right-0 z-10 nav-button next p-3 pe-0 md:pe-3 top-[50%] translate-y-[-50%]"
+          (click)="nextSlide(carousels.RESULTS)" title="Siguiente">
+          <svg width="30" height="30" fill="#3B96D1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path
+              d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+          </svg>
+        </button>
+        <swiper-container #resultsSwiper [breakpoints]="resultsSwiperbreakpoints" class="mySwiper w-full max-w-[1342px] mx-auto h-[204px]" navigation="false">
+          @for (item of resultsImages; track $index) {
+            <swiper-slide class="w-full max-w-[434px] bg-[#12548659] rounded-[10px] overflow-hidden">
+              <img src="{{item}}" alt="" class="w-full h-full object-cover">
+            </swiper-slide>
+          }
+        </swiper-container>
+      </div>
     </section>
 
     <section class="max-w-[1520px] mx-auto w-full px-7">
