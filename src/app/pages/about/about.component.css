@@ -1,0 +1,19 @@
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] > summary > fa-icon {
+  rotate: 180deg;
+}
+
+details[open] #ver-mas {
+  display: none;
+}
+
+details[open] #ver-menos {
+  display: block;
+}
